@@ -40,11 +40,11 @@ header {
 	height: 100vh;
 	margin-bottom: 4rem;
 
-	background-image: url(../images/ebam.jpg);
+	background-image: url(../images/vaqbanner.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	/* background-position: center; */
-	background-position: center 70%;
+	background-position: center;
+	/* background-position: center 70%; */
 }
 
 nav {
