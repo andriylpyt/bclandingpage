@@ -1,0 +1,429 @@
+/* generals */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 4rem;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	border: none;
+	outline: none;
+	font-family: inherit;
+}
+
+input,
+textarea {
+	border: none;
+	outline: none;
+	font-family: inherit;
+}
+
+header {
+	width: 100vw;
+	min-width: 100%;
+	max-width: 100%;
+	height: 100vh;
+	margin-bottom: 4rem;
+
+	background-image: url(../images/vaqbanner.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+nav {
+	padding: 1rem 5rem;
+	width: inherit;
+	top: 0;
+	right: 0;
+
+	position: fixed;
+	z-index: 100;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.2rem;
+}
+
+.menu {
+	display: flex;
+	column-gap: 1rem;
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+
+.menu * {
+	cursor: pointer;
+	transition: color 0.15s;
+}
+
+.menu *:hover {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.title {
+	font-size: 3.5rem;
+	padding: 1rem 0;
+	font-weight: 300;
+}
+
+.sub-title {
+	font-weight: 300;
+	letter-spacing: 0.1rem;
+	font-size: 2.5rem;
+	padding: 1rem 0;
+}
+
+.semi-title {
+	text-align: center;
+	font-size: 1.5rem;
+	letter-spacing: 0.05rem;
+}
+
+#music,
+#about,
+#shows,
+#follow,
+#contact {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	scroll-behavior: smooth;
+}
+
+.video {
+	width: 80%;
+	position: relative;
+}
+
+.music-video {
+	width: 100%;
+}
+
+.video h1 {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	color: white;
+	font-size: 4rem;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 0.2rem;
+}
+
+#music .semi-title {
+	margin: 1.5rem 0 0.5rem;
+}
+
+.streaming-services,
+.social-medias {
+	margin: 2rem 0;
+	display: flex;
+	justify-content: space-evenly;
+	width: 80%;
+}
+
+.service img {
+	height: 3rem;
+}
+
+.albums {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 1.2rem;
+	width: 60%;
+	margin: 1rem 0;
+}
+
+.album img {
+	width: 100%;
+}
+
+.album p:first-of-type {
+	font-weight: 300;
+}
+
+.about-info {
+	width: 60%;
+	margin: 1rem 0 0;
+}
+
+.about-info p {
+	font-size: 1.2rem;
+	margin: 0 0 3rem;
+	font-weight: 300;
+}
+
+.show-dates {
+	width: 60%;
+}
+
+.show-date {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	column-gap: 2rem;
+	border-bottom: 1px solid black;
+	padding: 1rem 0.5rem;
+}
+
+.date p:first-of-type {
+	font-weight: 600;
+}
+
+.show-info {
+	flex: 1;
+}
+
+.show-action button {
+	padding: 0.7rem 2rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	font-size: 1rem;
+	min-width: 8rem;
+}
+
+.social-medias {
+	margin: 1rem 0;
+}
+
+.social-media img {
+	height: 4.5rem;
+}
+
+.fields {
+	width: 60%;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0;
+}
+
+.field-input {
+	height: 2.5rem;
+}
+
+.field-input,
+.field-textarea {
+	border: 1px solid black;
+	padding: 0.5rem;
+	font-size: 1rem;
+}
+
+.field-textarea {
+	height: 7.5rem;
+	resize: vertical;
+}
+
+.field-submit {
+	padding: 0.7rem 2rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: white;
+	font-size: 1rem;
+	min-width: 8rem;
+	cursor: pointer;
+}
+
+.field-input:focus,
+.field-textarea:focus {
+	border: 1px solid #888888;
+}
+
+footer {
+	text-align: center;
+	padding: 4rem 0 1rem;
+}
+
+.menu-bar {
+	justify-content: center;
+	align-items: center;
+	width: 2rem;
+	height: 2rem;
+	display: none;
+}
+
+.mobile-menu {
+	text-align: right;
+	background-color: #fff;
+	max-width: 300px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 200;
+	color: black;
+	padding: 1rem;
+	margin-left: auto;
+	overflow: hidden;
+	display: none;
+
+	position: absolute;
+	bottom: -120px;
+}
+
+.mobile-menu * {
+	margin: 1rem 0;
+}
+
+.mobile-menu *:hover {
+	color: black !important;
+}
+
+@media (max-width: 1024px) {
+	.streaming-services {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem 1rem;
+	}
+
+	.service {
+		text-align: center;
+	}
+
+	.albums {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		margin-bottom: 2rem;
+	}
+
+	nav {
+		padding: 1rem 1.5rem;
+	}
+
+	.menu {
+		z-index: 100;
+		position: fixed;
+		right: -100%;
+		top: 86px;
+		gap: 0;
+		flex-direction: column;
+		background-color: rgba(0, 0, 0, 0.5);
+		width: 100%;
+		text-align: center;
+		transition: 0.25s;
+	}
+
+	.menu div {
+		margin: 1rem 0;
+	}
+
+	.menu.active {
+		right: 0;
+	}
+
+	.menu-bar {
+		display: flex !important;
+	}
+
+	.video h1 {
+		font-size: 2rem;
+	}
+
+	.video {
+		width: 100%;
+	}
+
+	.albums,
+	.about-info,
+	.show-dates,
+	.fields {
+		width: 100%;
+		padding: 0 1rem;
+	}
+}
+
+@media (max-width: 426px) {
+	header {
+		margin-bottom: 1rem;
+	}
+
+	.menu {
+		top: 64px;
+	}
+
+	.logo {
+		font-size: 1.3rem;
+	}
+
+	.title {
+		font-size: 2.5rem;
+	}
+
+	.semi-title {
+		font-size: 1rem;
+	}
+
+	.streaming-services {
+		grid-template-columns: 1fr;
+	}
+
+	.service img {
+		height: 2rem;
+	}
+
+	.albums {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.social-medias {
+		width: 60%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem 1rem;
+		text-align: center;
+	}
+
+	.social-media img {
+		height: 3rem;
+	}
+
+	.about-info p {
+		font-size: 1rem;
+	}
+
+	.show-date {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.show-info {
+		margin: 1rem 0;
+	}
+}
+
+@media (max-width: 320px) {
+	.video h1 {
+		font-size: 1.2rem;
+	}
+}
